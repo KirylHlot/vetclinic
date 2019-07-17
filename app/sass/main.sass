@@ -1,0 +1,694 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+	display: block
+
+ol, ul
+	list-style: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+a
+	color: inherit
+	&:hover
+		color: $orange
+		text-decoration: none
+
+input
+	&[type="number"]
+		&::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+			-webkit-appearance: none
+			margin: 0
+		-moz-appearance: textfield
+		&:hover, &:focus
+			-moz-appearance: number-input
+	&[type=number]
+		&::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+			-webkit-appearance: none
+			margin: 0
+
+.ftwb
+	font-weight: bold
+	white-space: nowrap
+
+///////////////end reset
+
+body
+	font-size: 16px
+	height: 100%
+	width: 100%
+	position: relative
+	line-height: normal
+	overflow-x: hidden
+	font-family: $default-font
+	color: $color
+
+
+section, footer, .header
+	height: auto
+	position: relative
+	z-index: 10
+
+
+.header
+	width: 100%
+	background: url(../img/header_bg.jpg)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat	
+	padding: 24px 0 92px
+	.hat
+		width: 85%
+		height: auto
+		margin: auto
+		position: relative
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 24px
+		.left_part,	.right_part
+			width: 42%
+			display: flex
+			justify-content: space-between
+			align-items: center
+			.item
+				display: flex
+				align-items: center
+				justify-content: flex-start
+				width: 48%
+				font-size: 22px
+				.content_wrapper
+					white-space: normal
+					.life_logo
+						width: auto
+						height: 28px
+						margin-right: 6px
+						position: relative
+						top: 6px
+				.icon_wrapper
+					margin-right: 36px
+					img
+		.center_part
+			width: 15%
+			height: auto
+			display: flex
+			justify-content: center
+			align-items: center
+			img
+				width: 100%
+				height: auto
+				max-width: 200px
+		.right_part
+			padding-right: 1%
+			.item
+					width: auto
+	nav
+		width: 85%
+		margin: auto
+		height: auto
+		position: relative
+		.burger
+			display: none
+		.main_navigation
+			width: 100%
+			height: auto
+			display: flex
+			flex-direction: row
+			align-items: center
+			justify-content: center
+			background-color: $orange
+			padding: 22px 0
+			position: relative
+			box-shadow: 2px 2px 20px rgba(136, 219, 250, 0.2)
+			border-radius: 100px
+			top: 0
+			transition: top .5s
+			&.hide_nav
+				top: -100%
+			li
+				font-weight: bold
+				font-size: 16px
+				line-height: 20px
+				letter-spacing: 0.01em
+				color: #F1F1F1
+				position: relative
+				margin: 0 40px
+				display: flex
+				flex-direction: column-reverse
+				align-items: center
+				justify-content: center
+				z-index: 3
+				&:hover
+					a
+						top: -8px
+						color: $white
+				&.currient_page
+					&:before
+						content: url('../img/menu_bone.png')
+						display: block
+						margin-top: 4px
+				a
+					top: 0
+					position: relative
+					transition: top .5s
+				&.burger_close
+					display: none
+					justify-content: center
+					align-items: center
+					width: 46px
+					height: 46px
+					position: absolute
+					background-color: $white
+					border-radius: 50%
+					top: 8px
+					right: 8px
+					margin: 0
+	.bottom_part
+		width: 85%
+		height: auto
+		margin: auto
+		position: relative
+		display: flex
+		flex-direction: row
+		justify-content: center
+		.left_column
+			width: 55%
+			position: relative
+			top: -50px
+			img
+				width: 100%
+				height: auto
+				position: relative
+		.right_column
+			width: 45%
+			height: auto
+			display: flex
+			align-items: center
+			.h1_title
+				font-weight: bold
+				font-size: 40px
+				line-height: 64px
+				text-transform: uppercase
+				span
+					color: $purple
+
+.title_line
+	width: 100%
+	height: auto
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding-left: 10%
+	margin-bottom: 32px
+	.h2_wrapper
+		width: 35%
+		.h2_title
+			font-weight: bold
+			font-size: 32px
+			line-height: 39px
+			color: $titleColor
+			margin-bottom: 16px
+		.line_arrows
+			display: flex
+			flex-direction: row
+			align-items: center
+			.left_arr
+				margin-right: 32px
+				cursor: pointer
+				padding: 8px 0
+			.right_arr
+				cursor: pointer
+				padding: 8px 0
+	.title_link_wrapper
+		width: 30%
+		text-align: left
+		&:hover
+			a
+				color: $orange
+		a
+			font-size: 18px
+			line-height: 22px
+			color: $titleColor
+			margin-bottom: 26px
+			display: block
+		.bottom_line
+			width: 100%
+			height: 4px
+			background-color: $orange
+
+.carousel_wrapper
+	width: 100%
+	height: auto
+	.carousel_item
+		padding: 0 0 48px
+		background-color: $white
+		box-shadow: 2px 2px 20px rgba(136, 219, 250, 0.2)
+		border-radius: 40px
+		position: relative
+		margin: 0 16px 32px
+		&:hover
+			.title_wrapper
+				color: $orange
+			.button
+				background-color: $purple
+		.img_wrapper
+			width: 100%
+			height: 320px
+			display: flex
+			justify-content: center
+			align-items: center
+			border-radius: 34px 32px 50% 30%
+			overflow: hidden
+			position: relative
+			margin-bottom: 32px
+			img
+				width: 100%
+				height: auto
+				position: absolute
+		.title_wrapper
+			font-weight: bold
+			font-size: 24px
+			line-height: 29px
+			text-align: center
+			margin-bottom: 32px
+			padding: 0 16px
+		.content
+			padding: 0 16px
+			line-height: 24px
+			text-align: center
+		.button
+			width: 190px
+			height: 48px
+			background: #C4C4C4
+			border-radius: 50px
+			position: absolute
+			display: flex
+			justify-content: center
+			align-items: center
+			color: $white
+			font-weight: bold
+			left: 50%
+			margin-left: -95px
+			bottom: -24px
+			z-index: 2
+			&:before
+				content: ""
+				width: 48px
+				height: 48px
+				border-radius: 50%
+				background-color: transparent
+				border-left: 8px solid $orange
+				position: absolute
+				left: 0
+
+.advantages
+	padding: 80px 0
+	.advantages_wrapper
+		width: 85%
+		margin: auto
+
+
+.spec
+	padding: 80px 0
+	.spec_wrapper
+		width: 85%
+		margin: auto
+	.carousel_wrapper
+		.carousel_item 
+			padding: 0 0 16px
+			margin: 0 16px
+			.img_wrapper
+				border-radius: 32px 32px 40% 40%
+				align-items: flex-start
+		.title_wrapper
+			font-size: 18px
+			margin-bottom: 16px
+
+
+.callback
+	padding: 80px 0
+	.callback_wrapper
+		width: 85%
+		margin: auto
+	.carousel_wrapper
+		.carousel_item 
+			padding: 0 0 16px
+			margin: 0 16px
+			.title_wrapper
+				font-weight: bold
+				font-size: 18px
+				line-height: 22px
+				text-align: center
+				letter-spacing: 0.01em
+				margin-bottom: 16px
+			.date
+				margin: 0 auto 16px
+				text-align: center
+			.content
+				img
+					width: auto
+					height: auto
+					display: inline
+					float: left
+
+.blog
+	padding: 80px 0
+	.blog_wrapper
+		width: 85%
+		margin: auto
+		.content_wrapper
+			width: 100%
+			height: auto
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			.left_part
+				width: 48%
+				.blog_carousel
+					.carousel_item
+						margin: 0 2%
+						.img_wrapper
+							position: relative
+							border-radius: 40px
+							overflow: hidden
+							display: flex
+							justify-content: center
+							align-items: center
+							height: 320px
+							box-shadow: 2px 2px 20px rgba(136, 219, 250, 0.2)
+							margin-bottom: 24px
+							img
+								position: absolute
+								width: 100%
+								height: auto
+						.date
+							line-height: 20px
+							margin-bottom: 16px
+						.title
+							font-weight: bold
+							font-size: 18px
+							line-height: 22px
+							letter-spacing: 0.01em
+							margin-bottom: 16px
+						.content
+							line-height: 24px
+							margin-bottom: 16px
+						.button
+							font-weight: bold
+							line-height: 20px
+			.right_part
+				width: 48%
+				display: flex
+				flex-direction: column
+				.item
+					width: 100%
+					display: flex
+					flex-direction: row
+					align-items: center
+					justify-content: space-between
+					margin-bottom: 24px
+					&:last-child
+						margin-bottom: 0
+					.content_part
+						width: 48%
+						.date
+							line-height: 20px
+							margin-bottom: 24px
+						.title
+							font-weight: bold
+							font-size: 18px
+							line-height: 22px
+							letter-spacing: 0.01em
+							margin-bottom: 16px
+						.cont
+							line-height: 24px
+							margin-bottom: 16px
+						.button
+							font-weight: bold
+							line-height: 20px
+					.img_wrapper
+						width: 48%
+						height: 320px
+						box-shadow: 2px 2px 20px rgba(136, 219, 250, 0.2)
+						border-radius: 40px
+						position: relative
+						display: flex
+						justify-content: center
+						align-items: center
+						overflow: hidden
+						img
+							position: absolute
+							width: 100%
+							height: auto
+//footer
+.footer
+	.footer_wrapper
+		width: 65%
+		margin: auto
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		border-top: 1px solid #D2D2D2
+		border-bottom: 1px solid #D2D2D2
+		padding: 30px 60px
+		.left_part
+			width: 53%
+			.title
+				font-weight: bold
+				font-size: 18px
+				line-height: 22px
+				margin-bottom: 24px
+			.title_desc
+				line-height: 20px
+				margin-bottom: 32px
+			.service_title
+				font-weight: bold
+				font-size: 18px
+				line-height: 22px
+				margin-bottom: 16px
+			.service_list
+				li
+					font-size: 18px
+					line-height: 32px
+					margin-bottom: 8px
+					a
+		.right_part
+			width: 35%
+			.footer_logo_wrapper
+				display: block
+				width: 200px
+				height: auto
+				margin-left: auto
+				margin-bottom: 16px
+				img
+					width: 100%
+					height: auto
+			.bottom_block
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+				.left_p
+					width: 35%
+					.footer_nav
+						width: 100%
+						li
+							font-weight: bold
+							font-size: 18px
+							line-height: 22px
+							letter-spacing: 0.01em
+							margin-bottom: 16px
+							a
+				.right_p
+					width: 61%
+					.item
+						display: flex
+						flex-direction: row
+						align-items: center
+						margin-bottom: 16px
+						.icon_wrapper
+							width: auto
+							margin-right: 38px
+							img
+						.content_wrapper
+							.footer_life_icon
+								height: 22px
+								position: relative
+								top: 6px
+	.creater_wrapper
+		width: 65%
+		margin: auto
+		padding: 30px 60px
+		text-align: center
+		a
+			color: $purple
+
+
+.circle_1,
+.circle_2,
+.circle_3,
+.circle_4
+	position: absolute
+	z-index: 0
+	height: 600px
+	width: auto
+
+.circle_2,
+.circle_4
+	right: 0
+
+.circle_1,
+.circle_3
+	left: 0
+
+.circle_1
+	top: 30%
+.circle_2
+	top: 40%
+.circle_3
+	top: 60%
+.circle_4
+	top: 80%
+
+.c1,
+.c2,
+.c3,
+.c4,
+.c5,
+.c6,
+.c7,
+.c8,
+.c9
+	position: absolute
+	z-index: 2
+
+.c1
+	top: 25%
+	left: 25%
+.c2
+	top: 32%
+	left: 30%
+.c3
+	top: 90%
+	left: 35%
+.c4
+	top: 55%
+	left: 40%
+.c5
+	top: 10%
+	left: 48%
+.c6
+	top: 40%
+	left: 64%
+.c7
+	top: 50%
+	left: 72%
+.c8
+	top: 64%
+	left: 78%
+.c9
+	top: 15%
+	left: 85%
+
+// .main_header
+// 	position: relative
+// 	background: url(../img/main_bg.png)
+// 	background-size: cover
+// 	background-position: center
+// 	background-repeat: no-repeat
+	
+
+
+// .wibro
+// 	position: relative
+// 	-webkit-animation: 0.3s tremor ease-out infinite
+// 	animation: 0.3s tremor ease-out infinite
+
+// @-webkit-keyframes tremor
+//   0%, 25%
+//     left: -2px
+//     top: -2px
+//     -webkit-transform: translateX(-4%)
+//     transform: translateX(-4%)
+
+//   50%, 100%
+//     left: 3px
+//     top: 3px
+//     -webkit-transform: translateX(4%)
+//     transform: translateX(4%)
+
+
+// @-moz-keyframes tremor
+//   0%, 25%
+//     left: -2px
+//     -webkit-transform: translateX(-4%)
+//     transform: translateX(-4%)
+
+//   50%, 100%
+//     left: 1px
+//     -webkit-transform: translateX(4%)
+//     transform: translateX(4%)
+
+
+// @-ms-keyframes tremor
+//   0%, 25%
+//     left: -1px
+//     -webkit-transform: translateX(-4%)
+//     transform: translateX(-4%)
+
+//   50%, 100%
+//     left: 1px
+//     -webkit-transform: translateX(4%)
+//     transform: translateX(4%)
+
+
+// @-o-keyframes tremor
+//   0%, 25%
+//     left: -1px
+//     -webkit-transform: translateX(-4%)
+//     transform: translateX(-4%)
+
+//   50%, 100%
+//     left: 1px
+//     -webkit-transform: translateX(4%)
+//     transform: translateX(4%)
+
+
+// @keyframes tremor
+//   0%, 25%
+//     left: -2px
+//     -webkit-transform: translateX(-4%)
+//     transform: translateX(-4%)
+
+//   50%, 100%
+//     left: 2px
+//     -webkit-transform: translateX(4%)
+//     transform: translateX(4%)
+
+
+
+
+
+
+
+
+@import "media" // Always at the end

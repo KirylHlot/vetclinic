@@ -1,0 +1,494 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+@media (max-width: 1800px)
+	.header .hat .left_part .item .icon_wrapper, .header .hat .right_part .item .icon_wrapper
+		margin-right: 16px
+
+	.header .hat .left_part .item, .header .hat .right_part .item
+		font-size: 20px
+
+	.header .bottom_part .right_column .h1_title
+		font-size: 34px
+		line-height: 56px
+
+	// footer
+	.footer .footer_wrapper
+		width: 75%
+
+// @media (max-width: 1700px)
+
+@media (max-width: 1600px)
+	.header .hat .left_part .item, .header .hat .right_part .item
+		font-size: 18px
+
+	.header .bottom_part .left_column
+		top: -32px
+
+	.header .bottom_part .right_column .h1_title
+		font-size: 29px
+		line-height: 48px
+
+	.header nav .main_navigation li
+		margin: 0 24px
+
+	.header
+		padding: 24px 0 46px
+
+	.blog .blog_wrapper .content_wrapper .left_part .blog_carousel .carousel_item .img_wrapper
+		height: 260px
+
+	.blog .blog_wrapper .content_wrapper .right_part .item .content_part .cont
+		line-height: 18px
+		font-size: 14px
+
+	//footer
+	.footer .footer_wrapper
+		padding: 30px
+// @media (max-width: 1500px)
+
+@media (max-width: 1400px)
+	.header .hat, .header nav, .header .bottom_part
+		width: 95%
+
+	.header .hat .left_part .item .icon_wrapper, .header .hat .right_part .item .icon_wrapper
+		margin-right: 8px
+
+	.header .hat .left_part .item .icon_wrapper img, .header .hat .right_part .item .icon_wrapper img
+		width: 32px
+		height: auto
+
+	.header .hat .left_part .item, .header .hat .right_part .item
+		font-size: 16px
+
+	.header .hat .left_part .item .content_wrapper .life_logo
+		height: 23px
+
+	.header .bottom_part .right_column .h1_title
+		font-size: 26px
+		line-height: 42px
+
+	.advantages .advantages_wrapper
+		width: 95%
+
+	.title_line
+		padding-left: 5%
+
+	.title_line .title_link_wrapper
+		width: 35%
+
+	.spec .spec_wrapper
+		width: 95%
+
+	.callback .callback_wrapper
+		width: 95%
+
+	.blog .blog_wrapper
+		width: 95%
+
+	//footer
+	.footer .footer_wrapper
+		width: 85%
+
+	.footer .footer_wrapper .right_part
+		width: 45%
+
+
+// @media (max-width: 1300px)
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.header .hat .left_part .item, .header .hat .right_part .item
+		width: auto
+		font-size: 15px
+
+	.header .hat .center_part
+		width: 12%
+
+	.header nav .main_navigation
+		padding: 16px 0
+
+	.header nav .main_navigation li
+		margin: 0 16px
+
+	.header .bottom_part .left_column
+		top: -24px
+		width: 50%
+
+	.title_line
+		padding-left: 0
+
+	.title_line .h2_wrapper
+		width: 40%
+
+	.title_line
+		margin-bottom: 16px
+
+	.carousel_wrapper .carousel_item .img_wrapper
+		height: 260px
+
+	.advantages .circle_first
+		width: 600px
+
+	.blog .blog_wrapper .content_wrapper .left_part
+		width: 40%
+
+	.blog .blog_wrapper .content_wrapper .right_part
+		width: 56%
+
+	//footer
+	.footer .footer_wrapper
+		width: 95%
+
+// ≥992px
++media-breakpoint-down(md)
+	.header .hat .left_part, .header .hat .right_part
+		align-items: flex-start
+		flex-direction: column
+		width: 40%
+
+	.header .hat .center_part
+		width: 20%
+
+	.header .hat .right_part
+		padding-left: 15%
+		padding-right: 0
+
+	.header .hat .left_part .item, .header .hat .right_part .item
+		margin-bottom: 16px	
+	.header .hat .left_part .item:last-child, .header .hat .right_part .item:last-child
+		margin-bottom: 0
+
+	.header nav .main_navigation li
+		margin: 0 8px
+
+	.header .bottom_part .right_column .h1_title
+		font-size: 20px
+		line-height: 29px
+
+	.header
+		padding: 24px 0
+
+	.header .hat .left_part .item, .header .hat .right_part .item
+		width: 96%
+
+	.header .hat .right_part
+		padding-left: 4%
+
+	.title_line .h2_wrapper
+		width: 55%
+
+	.title_line .h2_wrapper .h2_title
+		font-size: 26px
+		line-height: 34px
+
+	.title_line .title_link_wrapper a
+		margin-bottom: 16px
+
+	.carousel_wrapper .carousel_item .title_wrapper
+		font-size: 20px
+		line-height: 26px
+		margin-bottom: 16px
+
+	.carousel_wrapper .carousel_item .img_wrapper
+		margin-bottom: 16px
+
+	.advantages
+		padding: 32px 0
+
+	.spec
+		padding: 32px 0
+
+	.callback
+		padding: 32px 0
+
+	.blog .blog_wrapper .content_wrapper .right_part
+		width: 58%
+
+	.blog .blog_wrapper .content_wrapper .right_part .item .content_part .date
+		margin-bottom: 16px
+
+	.blog .blog_wrapper .content_wrapper
+		flex-direction: column
+
+	.blog .blog_wrapper .content_wrapper .left_part
+		width: 100%
+		margin-bottom: 32px
+
+	.blog .blog_wrapper .content_wrapper .right_part
+		width: 100%
+
+	.blog
+		padding: 32px 0
+
+	//footer
+	.footer .footer_wrapper
+		padding: 16px 0
+
+	.footer .creater_wrapper
+		width: 100%
+		padding: 16px 0
+
+	.footer .footer_wrapper .left_part .title_desc
+		margin-bottom: 16px
+
+	.footer .footer_wrapper .left_part .title
+		margin-bottom: 16px
+
+	.footer .footer_wrapper .left_part .service_list li
+		font-size: 16px
+		line-height: 26px
+		margin-bottom: 4px
+
+	.footer .footer_wrapper .right_part .footer_logo_wrapper
+		width: 160px
+
+	.footer .footer_wrapper .right_part .bottom_block .left_p .footer_nav li
+		font-size: 16px
+		line-height: 21px
+		margin-bottom: 8px
+
+	.footer .footer_wrapper .left_part
+		width: 45%
+
+	.footer .footer_wrapper .right_part
+		width: 54%
+
+	.footer .footer_wrapper .right_part .bottom_block .right_p .item .icon_wrapper
+		margin-right: 16px
+
+	.footer .footer_wrapper .right_part .bottom_block .left_p
+		width: 30%
+
+// ≥768px
++media-breakpoint-down(sm)
+	.header nav .burger
+		display: block
+		width: 46px
+		height: 46px
+		border-radius: 50%
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: $orange
+		margin-left: auto
+		cursor: pointer
+
+	.header nav .main_navigation
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		border-radius: 0
+		flex-direction: column
+		z-index: 100
+
+	.header nav .main_navigation li
+		margin: 8px 0
+		font-size: 18px
+
+	.header nav .main_navigation li.burger_close
+		display: flex
+
+
+	.header .bottom_part .left_column
+		top: 0
+
+	.header .bottom_part .right_column .h1_title
+		font-size: 18px
+		line-height: 27px
+
+	.carousel_wrapper .carousel_item .content
+		line-height: 18px
+		font-size: 14px
+
+	.carousel_wrapper .carousel_item
+		margin: 0 8px 32px
+
+	.carousel_wrapper .carousel_item .title_wrapper
+		margin-bottom: 8px
+
+	.carousel_wrapper .carousel_item
+		padding: 0 0 32px
+
+	.title_line .title_link_wrapper
+		width: 39%
+
+	.title_line .h2_wrapper
+		width: 59%
+
+	.advantages .circle_first
+		width: 400px
+	//footer
+	.footer .footer_wrapper
+		flex-direction: column
+		justify-content: flex-start
+
+	.footer .footer_wrapper .left_part
+		width: 100%
+		margin-bottom: 16px
+
+	.footer .footer_wrapper .right_part
+		width: 100%
+
+	.footer .footer_wrapper .right_part .footer_logo_wrapper
+		display: none
+
+	.footer .creater_wrapper
+		padding: 16px
+
+	.circle_1,
+	.circle_2,
+	.circle_3,
+	.circle_4
+		height: 400px
+
+// ≥576px
++media-breakpoint-down(xs)
+	.header
+		padding: 16px
+		display: flex
+		flex-direction: column
+
+	.header .bottom_part, .header .hat, .header nav
+		width: 100%
+
+	.header nav
+		order: -1
+		top: -8px
+		right: -8px
+
+	.header .bottom_part
+		flex-direction: column
+
+	.header .bottom_part .left_column
+		width: 100%
+
+	.header .bottom_part .right_column
+		width: 100%
+		text-align: center
+
+	.header .hat
+		flex-direction: column
+		margin-bottom: 0
+
+	.header .hat .left_part, .header .hat .right_part
+		width: 100%
+
+	.header .hat .right_part
+		padding-left: 0	
+
+	.header .hat .left_part
+		order: 3
+		margin-bottom: 16px
+
+	.header .hat .right_part
+		order: 2
+		margin-bottom: 16px
+
+	.header .hat .center_part
+		order: 1
+		margin-bottom: 16px
+		width: 50%
+
+	.title_line .h2_wrapper .line_arrows
+		display: none
+
+	.title_line
+		flex-direction: column
+
+	.title_line .h2_wrapper
+		width: 100%
+
+	.title_line .title_link_wrapper
+		width: 100%
+
+	.title_line .h2_wrapper .h2_title
+		font-size: 20px
+		text-align: center
+		line-height: normal
+
+	.advantages .advantages_wrapper
+		width: 100%
+
+	.advantages
+		padding: 16px
+
+	.title_line .title_link_wrapper a
+		margin-bottom: 4px
+		text-align: center
+
+	.title_line .title_link_wrapper .bottom_line
+		width: 50%
+		height: 1px
+		margin: auto
+
+	.advantages .circle_first
+		width: 250px
+
+	.spec .spec_wrapper
+		width: 100%
+
+	.spec
+		padding: 16px
+
+	.callback
+		padding: 16px
+
+	.callback .callback_wrapper
+		width: 100%
+
+	.carousel_wrapper .carousel_item .callback_content
+		padding: 0
+
+	.blog .blog_wrapper
+		width: 100%
+
+	.blog
+		padding: 16px
+
+	.blog .blog_wrapper .content_wrapper .left_part
+		text-align: center
+
+	.blog .blog_wrapper .content_wrapper .right_part .item
+		flex-direction: column-reverse
+
+	.blog .blog_wrapper .content_wrapper .right_part .item .content_part
+		width: 100%
+
+	.blog .blog_wrapper .content_wrapper .right_part .item .img_wrapper
+		width: 100%
+		height: 260px
+		margin-bottom: 16px
+
+	.footer .footer_wrapper .right_part .bottom_block
+		flex-direction: column
+		justify-content: flex-start
+
+	.footer .footer_wrapper
+		text-align: center
+
+	.footer .footer_wrapper .right_part .bottom_block .left_p
+		width: 100%
+
+	.footer .footer_wrapper .right_part .bottom_block .right_p
+		width: auto
+
+	.footer .footer_wrapper .right_part .bottom_block .right_p .item .content_wrapper
+		text-align: left
+
+	.footer .footer_wrapper .right_part .bottom_block .left_p .footer_nav
+		margin-bottom: 16px
+
+	.footer .footer_wrapper
+		padding: 16px
+		width: 100%
+
+	.circle_1,
+	.circle_2,
+	.circle_3,
+	.circle_4
+		height: 300px
